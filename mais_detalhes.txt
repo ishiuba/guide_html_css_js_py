@@ -1,0 +1,14 @@
+Para mais detalhes sobre html, css, js, py, etc eu recomendo assistir video aulas no youtube e estudar em
+alguns sites como o "https://www.w3schools.com/":
+https://www.w3schools.com/html/default.asp (HTML)
+https://www.w3schools.com/css/default.asp (CSS)
+https://www.w3schools.com/js/default.asp (JAVASCRIPT)
+https://www.w3schools.com/python/default.asp (PYTHON)
+https://www.w3schools.com/bootstrap/bootstrap_ver.asp (BOOTSTRAP)
+
+mais links:
+https://github.com/iuricode/padroes-de-commits
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Introduction
+https://rogerdudler.github.io/git-guide/index.pt_BR.html
+
+OBS: alguns dos links foram disponibilizados pelos professores, seja grato a eles! (profs Caio e Luiz R.)

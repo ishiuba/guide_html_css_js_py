@@ -1,0 +1,32 @@
+h1 {
+    /* Seletor */
+    color: #000000; /* Propriedade e valor */
+    font-size: 16px; /* Propriedade e valor */
+    font-family: Arial; /* Propriedade e valor */
+}
+
+.title {
+    /* Seletor */
+    color: #000000; /* Propriedade e valor */
+    font-size: 16px; /* Propriedade e valor */
+    font-family: Arial; /* Propriedade e valor */
+}
+
+#header {
+    /* Seletor */
+    background-color: #000000; /* Propriedade e valor */
+    padding: 20px; /* Propriedade e valor */
+}
+
+body {
+    /* Seletor */
+    background-color: #ffffff; /* Propriedade e valor */
+}
+
+footer {
+    /* Seletor */
+    background-color: #000000; /* Propriedade e valor */
+    padding: 20px; /* Propriedade e valor */
+}
+
+/* ... */
