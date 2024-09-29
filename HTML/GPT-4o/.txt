@@ -1,0 +1,56 @@
+HTML5 (HyperText Markup Language) é a linguagem de marcação usada para criar e estruturar páginas na web.
+Ela define a estrutura e o significado do conteúdo na página.
+
+Estrutura Básica de uma Página HTML
+Uma página HTML é composta por uma série de elementos, que são representados por tags.
+As tags são palavras-chave envolvidas por colchetes angulares (< e >) e podem ter nomes e atributos.
+
+Aqui está um exemplo básico de uma estrutura HTML:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minha Primeira Página HTML</title>
+</head>
+<body>
+    <h1>Bem-vindo ao HTML5!</h1>
+    <p>Esta é a minha primeira página web.</p>
+</body>
+</html>
+
+Vamos entender cada parte:
+
+<!DOCTYPE html>: Declara que o documento está usando HTML5.
+<html>: O elemento raiz que contém todo o conteúdo da página.
+<head>: Contém metadados sobre o documento, como o título da página.
+<title>: Define o título da página que aparece na aba do navegador.
+<body>: Contém o conteúdo visível da página, como textos, imagens e links.
+Elementos HTML
+Os elementos HTML são organizados em uma estrutura de árvore, onde cada
+elemento pode ter "pais" e "filhos". O elemento mais alto na árvore é o <html>.
+
+Os elementos HTML podem ser classificados em dois tipos principais:
+
+Elementos de Bloco: Ocupam toda a largura disponível e começam em uma
+nova linha. São usados para criar seções e divisões na página.
+Elementos de Linha: Ocupam apenas o espaço necessário para o seu conteúdo
+e não iniciam uma nova linha. São usados para itens como texto, links e imagens.
+
+Exemplos de Elementos Comuns
+<p>: Parágrafo. Um elemento de linha que contém um bloco de texto.
+<h1>, <h2>, <h3>, etc.: Títulos. Elementos de linha que contêm títulos de diferentes níveis de importância.
+<img>: Imagem. Um elemento de linha que exibe uma imagem.
+<a>: Link. Um elemento de linha que cria um link para outra página ou recurso.
+<ul>, <ol>, <li>: Listas. Elementos de bloco que criam listas não ordenadas (<ul>) ou ordenadas (<ol>) com itens (<li>).
+<div>: Divisão. Um elemento de bloco usado para agrupar outros elementos.
+<span>: Span. Um elemento de linha usado para agrupar partes de texto ou outros elementos inline.
+<form>: Formulário. Um elemento de bloco usado para criar formulários.
+<input>, <textarea>, <select>: Campos de formulário. Elementos de linha usados para criar campos de entrada de dados.
+<button>: Botão. Um elemento de linha usado para criar botões interativos.
+<label>: Rótulo. Um elemento de linha usado para rotular campos de formulário.
+<header>, <footer>, <nav>, <main>, <section>, <article>, <aside>: Estrutura da página. 
+Elementos de bloco usados para definir diferentes partes estruturais da página.
+Experimentando com HTML
+Para ver como esses elementos funcionam na prática, você pode criar um arquivo chamado "index.html" e abrir no navegador. 
+Isso permitirá que você veja como cada elemento é renderizado e interage na página.
+

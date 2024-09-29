@@ -21,25 +21,13 @@ Abaixo, vamos ver alguns exemplos de elementos HTML comuns:
 <ul>, <ol>, <li> - listas: elementos de bloco que contêm listas de itens.
 <div> - divisão: um elemento de bloco que pode ser utilizado para agrupar outros elementos.
 <span> - span: um elemento de linha
-<table> - tabela: um elemento de bloco que pode ser utilizado para criar tabelas.
-<thead>, <tbody>, <tr>, <td> - tabela: elementos de bloco que podem ser utilizados para criar linhas 
-    e colunas em uma tabela.
 <form> - formulário: um elemento de bloco que pode ser utilizado para criar formulários.
 <input>, <textarea>, <select> - campos de formulário: elementos de linha que podem ser utilizados 
     para criar campos de formulário.
 <button> - botão: um elemento de linha que pode ser utilizado para criar botões.
 <label> - rótulo: um elemento de linha que pode ser utilizado para criar rótulos para campos de formulário.
-<fieldset> - grupo de campos: um elemento de bloco que pode ser utilizado para agrupar campos de formulário.
-<legend> - legenda: um elemento de linha que pode ser utilizado para criar legendas para grupos de campos.
-<header>, <footer>, <nav>, <main>, <section>, <article>, <aside>, <details>, <figcaption>, <figure> 
+<header>, <footer>, <nav>, <main>, <section>, <article>, <aside> 
     - estrutura da página: elementos de bloco que podem ser utilizados para criar a estrutura da página.
-<mark> - marcador: um elemento de linha que pode ser utilizado para criar marcadores.
-<ruby> - ruby: um elemento de linha que pode ser utilizado para criar rytos.
-<time> - tempo: um elemento de linha que pode ser utilizado para criar tempo.
-<del>, <ins> - riscado e sublinhado: elementos de linha que podem ser utilizados para criar riscado e sublinhado.
-<details>, <summary> - detalhes e resumo: elementos de linha que podem ser utilizados para criar detalhes e resumo.
-<progress> - barra de progresso: um elemento de linha que pode ser utilizado para criar barra de progresso.
-<meter> - medidor: um elemento de linha que pode ser utilizado para criar medidor.
 
 
 Abra "anotacoes.html" no navegador para ver na prática o que é cada elemento HTML

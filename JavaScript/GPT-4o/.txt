@@ -1,0 +1,133 @@
+Tipos de Dados Primitivos
+
+JavaScript tem alguns tipos de dados básicos que você vai usar muito:
+
+Number: Números. Exemplo: 1, 2.5, 100.
+String: Textos. Exemplo: "Olá", "Mundo".
+Boolean: Verdadeiro ou falso. Exemplo: true, false.
+Null: Representa a ausência de valor. Exemplo: null.
+Undefined: Valor não definido. Exemplo: undefined.
+Variáveis
+Variáveis são como "caixas" onde você pode guardar valores. Para criar uma variável, você pode usar let, const ou var.
+
+
+let: Cria uma variável que pode ser alterada.
+
+let idade = 25;
+idade = 30; // Agora idade vale 30
+
+
+const: Cria uma variável que não pode ser alterada.
+
+const PI = 3.14;
+// PI = 4; // Isso dará erro porque PI é constante
+
+
+var: Similar a let, mas com algumas diferenças técnicas. Use let ou const na maioria das vezes.
+
+var nome = "João";
+
+
+Funções
+
+Funções são blocos de código que podem ser executados várias vezes. Elas podem receber parâmetros e retornar valores.
+Criando uma função:
+
+function somar(a, b) {
+  return a + b;
+}
+
+Chamando uma função:
+
+let resultado = somar(2, 3); // resultado será 5
+
+
+Arrays
+
+Arrays são listas de valores. Eles podem conter diferentes tipos de dados.
+Criando um array:
+
+const numeros = [1, 2, 3];
+
+Adicionando um elemento:
+
+numeros.push(4); // Agora numeros é [1, 2, 3, 4]
+
+Removendo o último elemento:
+
+const ultimo = numeros.pop(); // ultimo será 4, e numeros será [1, 2, 3]
+
+
+Objetos
+
+Objetos são coleções de pares chave-valor.
+Criando um objeto:
+
+const pessoa = {
+  nome: "João",
+  idade: 25
+};
+
+Acessando propriedades:
+
+console.log(pessoa.nome); // João
+console.log(pessoa["idade"]); // 25
+
+
+Operadores
+
+Você pode usar operadores para fazer cálculos e comparações.
+
+Aritméticos:
+
+let soma = 1 + 2; // 3
+let subtracao = 5 - 3; // 2
+
+Comparativos:
+
+let igual = 5 == 5; // true
+let estritamenteIgual = 5 === "5"; // false
+
+Lógicos:
+
+let and = true && false; // false
+let or = true || false; // true
+
+
+Estruturas de Controle
+
+Você pode controlar o fluxo do seu código com estruturas como loops e condicionais.
+
+Loops:
+
+for (let i = 0; i < 5; i++) {
+  console.log(i); // 0, 1, 2, 3, 4
+}
+
+Condicionais:
+
+let cor = 'verde';
+if (cor === 'verde') {
+  console.log('A cor é verde');
+} else {
+  console.log('A cor não é verde');
+}
+
+
+Funções de Array
+
+Arrays têm métodos úteis como map, filter e reduce.
+map: Aplica uma função a cada elemento do array e retorna um novo array.
+
+const dobro = numeros.map(num => num * 2);
+console.log(dobro); // [2, 4, 6]
+
+filter: Filtra os elementos do array com base em uma condição.
+
+const pares = numeros.filter(num => num % 2 === 0);
+console.log(pares); // [2]
+
+reduce: Reduz o array a um único valor.
+
+const soma = numeros.reduce((acumulador, atual) => acumulador + atual, 0);
+console.log(soma); // 6
