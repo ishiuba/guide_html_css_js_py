@@ -25,7 +25,10 @@ Vamos entender cada parte:
 <head>: Contém metadados sobre o documento, como o título da página.
 <title>: Define o título da página que aparece na aba do navegador.
 <body>: Contém o conteúdo visível da página, como textos, imagens e links.
+
+
 Elementos HTML
+
 Os elementos HTML são organizados em uma estrutura de árvore, onde cada
 elemento pode ter "pais" e "filhos". O elemento mais alto na árvore é o <html>.
 
@@ -35,6 +38,7 @@ Elementos de Bloco: Ocupam toda a largura disponível e começam em uma
 nova linha. São usados para criar seções e divisões na página.
 Elementos de Linha: Ocupam apenas o espaço necessário para o seu conteúdo
 e não iniciam uma nova linha. São usados para itens como texto, links e imagens.
+
 
 Exemplos de Elementos Comuns
 <p>: Parágrafo. Um elemento de linha que contém um bloco de texto.
