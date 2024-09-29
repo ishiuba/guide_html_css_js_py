@@ -10,5 +10,6 @@ mais links:
 https://github.com/iuricode/padroes-de-commits
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Introduction
 https://rogerdudler.github.io/git-guide/index.pt_BR.html
+https://youtu.be/6OxA9er9VFo (Curso de Lógica de Programação e Algoritmos - Aprenda em 4 Horas)
 
-OBS: alguns dos links foram disponibilizados pelos professores, seja grato a eles! (profs Caio e Luiz R.)
+OBS: alguns dos links foram disponibilizados pelos professores, seja grato a eles! (profs Caio e Luis R.)
