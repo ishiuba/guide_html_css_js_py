@@ -53,8 +53,7 @@ Exemplos de Elementos Comuns
 <button>: Botão. Um elemento de linha usado para criar botões interativos.
 <label>: Rótulo. Um elemento de linha usado para rotular campos de formulário.
 <header>, <footer>, <nav>, <main>, <section>, <article>, <aside>: Estrutura da página. 
-Elementos de bloco usados para definir diferentes partes estruturais da página.
-Experimentando com HTML
+
 Para ver como esses elementos funcionam na prática, você pode criar um arquivo chamado "index.html" e abrir no navegador. 
 Isso permitirá que você veja como cada elemento é renderizado e interage na página.
 
