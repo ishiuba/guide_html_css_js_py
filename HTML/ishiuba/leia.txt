@@ -31,3 +31,5 @@ Abaixo, vamos ver alguns exemplos de elementos HTML comuns:
 
 
 Abra "anotacoes.html" no navegador para ver na prática o que é cada elemento HTML
+
+OBS: Eu importei alguns codigos de outros diretórios para deixar o site exemplo menos feio.
