@@ -25,6 +25,13 @@
 > https://youtu.be/6OxA9er9VFo (Curso de Lógica de Programação e Algoritmos - Aprenda em 4 Horas)
 > 
 > https://youtu.be/AB35iSr1YyA?si=1EbN56NWCfb0zzgE (Aprender CSS do zero com Isabella Ballerini)
-
+>
+> https://www.youtube.com/playlist?list=PLZPZq0r_RZON03iKBjYOsOKr1-TD7z2lH (Cursos completos em inglês do canal Bro code)
+>
+> https://www.youtube.com/playlist?list=PLGUTW2vtAHlklonzaG4k_3IcYZu4X-TKK (Minha playlist de cursos para assistir)
+>
+> https://www.youtube.com/playlist?list=PLdPPE0hUkt0q_XT8zDe313e27wFQ-k9fe (Curso intensivo de React do canal Cod3r Cursos)
+> 
+> https://www.alura.com.br/artigos/javascript
 
 ## OBS: alguns dos links foram disponibilizados pelos professores, seja grato a eles! (profs Caio e Luis R.)
