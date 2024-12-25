@@ -1,0 +1,72 @@
+/* style.css */
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --link-color: #007bff;
+    --header-bg-color: #eee;
+    --nav-bg-color: #ddd;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: var(--header-bg-color);
+    padding: 1em;
+    text-align: center;
+}
+
+nav {
+    background-color: var(--nav-bg-color);
+    padding: 0.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 1em;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--link-color);
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: var(--header-bg-color);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+button {
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+/* Estilo para o tema escuro */
+body.dark-theme {
+    --bg-color: #333;
+    --text-color: #f4f4f4;
+    --link-color: #add8e6;
+    --header-bg-color: #555;
+    --nav-bg-color: #444;
+}
