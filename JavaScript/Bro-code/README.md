@@ -79,8 +79,8 @@
 - [073-IMAGE-SLIDER](https://iamshiuba.github.io/javascript-howto/073-IMAGE-SLIDER)
 - [074-CALLBACK-HELL](https://iamshiuba.github.io/javascript-howto/074-CALLBACK-HELL)
 - [075-PROMISES](https://iamshiuba.github.io/javascript-howto/075-PROMISES)
-- [076-ASYNC-AWAIT](https://iamshiuba.github.io/javascript-howto/076-ASYNC-AWAIT) ❌
-- [077-JSON-files](https://iamshiuba.github.io/javascript-howto/077-JSON-files) ❌
-- [078-COOKIES](https://iamshiuba.github.io/javascript-howto/078-COOKIES) ❌
-- [079-API-DATA-FETCHING](https://iamshiuba.github.io/javascript-howto/079-API-DATA-FETCHING) ❌
-- [080-WEATHER-APP](https://iamshiuba.github.io/javascript-howto/080-WEATHER-APP) ❌
+- [076-ASYNC-AWAIT](https://iamshiuba.github.io/javascript-howto/076-ASYNC-AWAIT) 
+- [077-JSON-files](https://iamshiuba.github.io/javascript-howto/077-JSON-files) 
+- [078-COOKIES](https://iamshiuba.github.io/javascript-howto/078-COOKIES) 
+- [079-API-DATA-FETCHING](https://iamshiuba.github.io/javascript-howto/079-API-DATA-FETCHING) 
+- [080-WEATHER-APP](https://iamshiuba.github.io/javascript-howto/080-WEATHER-APP) 
