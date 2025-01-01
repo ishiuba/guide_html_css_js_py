@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,219 +25,131 @@
   </head>
   <body>
     <header>
-      <div class="topnav" id="myTopnav">
-        <span class="fa fa-code"></span>
-        <a class="active" href="#main" data-translate="Homepage">Homepage</a>
-        <a href="#videos" data-translate="Videos">Videos</a>
-        <a href="#about" data-translate="About">About</a>
-
-        <label id="swicher" class="switch me-2">
-          <input type="checkbox" id="theme-switcher" />
-          <span class="slider round"></span>
-        </label>
-
-        <a href="javascript:void(0);" class="icon" onclick="showMenu()">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
+      <nav class="navbar navbar-expand-lg">
+        <div class="nav-container container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+            aria-controls="menu"
+            aria-expanded="false"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a href="#main" class="navbar-brand">
+            <i class="fa fa-code"></i>
+          </a>
+          <div class="collapse navbar-collapse justify-content-end" id="menu">
+            <ul id="pageURl" class="nav nav-underline">
+              <li class="nav-item">
+                <a href="#main" class="nav-link active" data-translate="Homepage"> </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#streaming"
+                  class="nav-link"
+                  data-translate="Streaming"
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#about"
+                  class="nav-link"
+                  data-translate="About"
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <button
+            id="theme-switcher"
+            type="button"
+            class="switch"
+            aria-label="Toggle Theme"
+          >
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </nav>
     </header>
-    <main>
+    <main id="main" class="container-fluid">
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
-            <div id="main">
-              <h1 data-translate="greeting">Hello, world!</h1>
-              <p class="lead" data-translate="mainMessage">
-                The website is still under construction, but you can check out
-                some of my videos, my about page or my GitHub.
-              </p>
-              <h2 data-translate="highlight">Highlights</h2>
-              <p class="lead" data-translate="hDescription">
-                A list of YouTube videos to watch here or in my Official Artist
-                Channel.
-              </p>
-              <div>
+          <div class="col-10 align-items-center">
+            <h1 data-translate="greeting"></h1>
+            <p class="lead" data-translate="mainMsg"></p>
+            <p class="lead" data-language="subMsg"></p>
+            <h2 data-translate="highlight"></h2>
+            <p class="lead" data-translate="hDescription"></p>
+            <div class="ratio ratio-16x9">
               <iframe
-                width="400px"
-                height="215px"
-                src="https://www.youtube.com/embed/videoseries?si=F6CnMkx4AUkuURA_&amp;list=OLAK5uy_laLvEldekJ_qsP5DMbG-PYcEW3oQEYu_Q"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
-              </div>
+              src="https://www.youtube.com/embed/videoseries?si=F6CnMkx4AUkuURA_&amp;list=OLAK5uy_laLvEldekJ_qsP5DMbG-PYcEW3oQEYu_Q"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
             </div>
+          </div>
 
-            <div id="videos">
-              <h1 data-translate="videosTitle">Videos</h1>
-              <p class="lead" data-translate="videosDescription">
-                This is the videos section, here are some videos to watch:
-              </p>
-              <div id="youtube" class="container">
-                <div class="col-auto">
-                  <iframe
-                    src="https://www.youtube.com/embed/Ct5kE8KGnQM?si=dca-S4qIp2txXlSA"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
-                  <div class="video-links">
-                    <a
-                      rel="noopener"
-                      class="link"
-                      href="https://www.youtube.com/watch?v=Ct5kE8KGnQM"
-                      target="_blank"
-                    >
-                      <strong>OVER-THINKING</strong>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-auto">
-                  <iframe
-                    src="https://www.youtube.com/embed/2jfeauEQx7w?si=TN1Mgz_QZqZ2zqUL"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
-                  <div class="video-links">
-                    <a
-                      rel="noopener"
-                      class="link"
-                      href="https://www.youtube.com/watch?v=2jfeauEQx7w"
-                      target="_blank"
-                    >
-                      <strong>Childhood Nostalgia</strong>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-auto">
-                  <iframe
-                    src="https://www.youtube.com/embed/kFSdn2X1Ttw?si=egoun5133EYJvdxj"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
-                  <div class="video-links">
-                    <a
-                      rel="noopener"
-                      class="link"
-                      href="https://www.youtube.com/watch?v=kFSdn2X1Ttw"
-                      target="_blank"
-                    >
-                      <strong>This Perfect World</strong>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-auto">
-                  <iframe
-                    src="https://www.youtube.com/embed/uf6PZ9WisZQ?si=gpTP6c4wX4YGyu2Xj"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
-                  <div class="video-links">
-                    <a
-                      rel="noopener"
-                      class="link"
-                      href="https://www.youtube.com/watch?v=uf6PZ9WisZQ"
-                      target="_blank"
-                    >
-                      <strong>Tragic Ending</strong>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="about">
-              <h1 data-translate="aboutTitle">About</h1>
-              <p class="lead" data-translate="aboutMessage">
-                I made this website for fun. Hope you enjoy coz I'm about to
-                make it better and better!<br />
-                Thank you for visiting!
-              </p>
-            </div>
+          <div id="streaming">
+              <h1 data-translate="streaming"></h1>
+              <div id="playlistContainer"></div>
+          </div>
+          <div id="about">
+              <h1 data-translate="aboutTitle"></h1>
+              <p class="lead" data-translate="aboutMsg"></p>
           </div>
         </div>
       </div>
     </main>
     <footer>
-      <div class="container">
-        <div class="row-cols-auto p-3">
-          <button
-            id="langselect"
-            class="icon"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#menu2"
-            aria-controls="menu"
-            aria-expanded="false"
-            aria-label="Change Language"
-          >
-            <i class="fa-solid fa-language"></i>
-          </button>
-          <div class="collapse p-1" id="menu2">
-            <input
-              type="radio"
-              class="btn-check"
-              name="btnradio"
-              id="btnradio1"
-              autocomplete="off"
-            />
-            <label
-              type="radio"
-              class="btn btn-outline-primary"
-              for="btnradio1"
-              onclick="setLanguage('en')"
-            >
-              <span class="fi fi-us"></span>
-            </label>
-            <input
-              type="radio"
-              class="btn-check"
-              name="btnradio"
-              id="btnradio2"
-              autocomplete="off"
-            />
-            <label
-              type="radio"
-              class="btn btn-outline-success"
-              for="btnradio2"
-              onclick="setLanguage('br')"
-            >
-              <span class="fi fi-br"></span>
-            </label>
-            <input
-              type="radio"
-              class="btn-check"
-              name="btnradio"
-              id="btnradio3"
-              autocomplete="off"
-            />
-            <label
-              type="radio"
-              class="btn btn-outline-danger"
-              for="btnradio3"
-              onclick="setLanguage('jp')"
-            >
-              <span class="fi fi-jp"></span>
-            </label>
-          </div>
+      <div class="container-fluid">
+        <button
+        id="langselect"
+        class="icon"
+        type="button"
+        title="Change Language"
+        data-bs-toggle="collapse"
+        data-bs-target="#language"
+        aria-controls="menu"
+        aria-expanded="false"
+        aria-label="Change Language"
+      >
+        <span class="fa-solid fa-language"></span>
+        <label for="langselect"
+          ><span data-translate="Translations"></span
+        ></label>
+      </button>
+      <div class="langclp collapse p-1" id="language">
+        <button
+          type="button"
+          data-language="en"
+          title="English"
+          class="fi fi-us"
+          aria-label="English"
+        ></button>
+        <button
+          type="button"
+          data-language="br"
+          title="Português"
+          class="fi fi-br"
+          aria-label="Português"
+        ></button>
+        <button
+          type="button"
+          data-language="jp"
+          title="日本語"
+          class="fi fi-jp"
+          aria-label="日本語"
+        ></button>
+      </div>
         </div>
         <div class="col-lg-auto">
-          <p>
-            Powered by NEXTせだい <br />
+          <p><span data-translate="prdBy"></span><br />
             &copy; 2023 - 2024 IamSHIUBA.
-            <span data-translate="footer">All rights reserved.</span>
+            <span data-translate="footer"></span>
           </p>
         </div>
         <div class="p-3">

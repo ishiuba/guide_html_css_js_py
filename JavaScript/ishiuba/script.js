@@ -1,237 +1,239 @@
-/**
- * The `initializeLanguage` function sets the selected language based on the value stored in
- * localStorage and checks the corresponding radio button.
- */
+// Dicionário de traduções temporário, em breve implementarei um sistema de traduções mais eficiente.
+const translations = {
+  Homepage: {
+    en: "Homepage",
+    br: "Pagina Inicial",
+    jp: "ホームページ",
+  },
+  About: {
+    en: "About",
+    br: "Sobre",
+    jp: "私について",
+  },
+  Translations: {
+    en: "Languages",
+    br: "Idiomas",
+    jp: "言語",
+  },
+  greeting: {
+    en: "Hello, world!",
+    br: "Olá, mundo!",
+    jp: "こんにちは、世界！",
+  },
+  mainMsg: {
+    en: "This is my first website built from scratch. I started coding in August 2024 and finished it in October 2024.",
+    br: "Este é meu primeiro site construído do zero. Comecei a programá-lo em agosto de 2024 e terminei em outubro de 2024.",
+    jp: "これは私がゼロから作った最初のウェブサイトです。2024年8月にコーディングを始め、2024年10月に完成させました。",
+  },
+  subMsg: {
+    en: "For now, there are just a few things to check: some articles, an about page, and you can visit my social media in the footer of the website.",
+    br: "Por enquanto, há apenas algumas coisas para conferir: alguns artigos, uma página sobre, e você pode visitar minhas redes sociais no rodapé do site.",
+    jp: "今のところ、チェックするものはいくつかだけです：いくつかの記事、紹介ページ、そしてウェブサイトのフッターにある私のソーシャルメディアを訪れることができます。",
+  },
+  highlight: {
+    en: "Highlights",
+    br: "Destaques",
+    jp: "ハイライト",
+  },
+  hDescription: {
+    en: "A list of YouTube videos to watch here or on my Official Artist Channel.",
+    br: "Uma lista de vídeos do YouTube para assistir aqui ou no meu Canal Oficial do Artista.",
+    jp: "ここでまたは私のオフィシャルアーティストチャンネルで見るYouTube動画のリスト。",
+  },
+  streaming: {
+    en: "Streaming",
+    br: "Streaming",
+    jp: "ストリーミング",
+  },
+  prdBy: {
+    en: "Powered by IamSHIUBA",
+    br: "Desenvolvido por IamSHIUBA",
+    jp: "開発者：IamSHIUBA",
+  },
+  footer: {
+    en: "All rights reserved.",
+    br: "Todos os direitos reservados.",
+    jp: "全著作権所有。",
+  },
+  aboutTitle: {
+    en: "About",
+    br: "Sobre",
+    jp: "概要",
+  },
+  aboutMsg: {
+    en: "I made this website for fun. I was taking a programming course and learning how to build a simple yet cool website.<br>Then, after a few weeks, I started my own web project. To be honest, I used AI for some parts since I'm still new to programming.<br>I used it for the JavaScript part and to improve some of my HTML/CSS code, but of course, I didn't make it 100% using AI.<br>Thank you for visiting my website!",
+    br: "Fiz este site por diversão. Estava fazendo um curso de programação e aprendendo a criar um site simples, mas legal.<br>Depois de algumas semanas, comecei meu próprio projeto web. Para ser sincero, usei IA em algumas partes, pois ainda sou iniciante em programação.<br>Usei-a para a parte de JavaScript e para melhorar meu código HTML/CSS, mas, claro, não o fiz 100% com IA.<br>Obrigado pela visita ao meu site!",
+    jp: "このウェブサイトは趣味で作りました。プログラミングコースを受講中で、シンプルながらもクールなウェブサイトの作り方を学んでいました。<br>数週間後、自分のウェブプロジェクトを始めました。正直に言うと、プログラミングはまだ初心者なので、AIをいくつかの部分で使用しました。<br>JavaScriptの部分と、HTML/CSSコードの改善に使用しましたが、もちろん100％AIで作ったわけではありません。<br>ウェブサイトへのご訪問、ありがとうございます！",
+  }
+};
+
+// Inicialização eficiente do idioma
 function initializeLanguage() {
   const selectedLanguage = localStorage.getItem("selectedLanguage") || "en";
   setLanguage(selectedLanguage);
 
-  const radioButton = document.querySelector(
-    `input[name="btnradio"][value="${selectedLanguage}"]`
+  const button = document.querySelector(
+    `button[data-language="${selectedLanguage}"]`
   );
-  if (radioButton) {
-    radioButton.checked = true;
-  }
+  if (button) button.classList.add("active");
 }
 
-/**
- * The function `setLanguage` allows for dynamic translation of elements on a webpage based on the
- * selected language and stores the selected language in local storage.
- * @param language - The `language` parameter is a string that represents the selected language for
- * translation.
- */
+// Alteração para acessar o objeto organizado por chaves
 function setLanguage(language) {
   const elementsToTranslate = document.querySelectorAll("[data-translate]");
-  elementsToTranslate.forEach((element) => {
+
+  for (const element of elementsToTranslate) {
     const translationKey = element.getAttribute("data-translate");
     const translation =
-      translations[language][translationKey] || translationKey;
+      translations[translationKey]?.[language] || translationKey;
     element.innerHTML = translation;
-  });
+  }
 
   localStorage.setItem("selectedLanguage", language);
-
   document.documentElement.setAttribute("lang", language);
 }
 
-/* The code `document.querySelectorAll('input[name="btnradio"]').forEach((radio) => {
-      radio.addEventListener("change", function () {
-        setLanguage(this.value);
-      });
-    });` is selecting all input elements with the attribute `name="btnradio"` on the webpage. It then
-    iterates over each of these input elements using the `forEach` method. */
-document.querySelectorAll('input[name="btnradio"]').forEach((radio) => {
-  radio.addEventListener("change", function () {
-    setLanguage(this.value);
+// Eventos e Inicialização
+document.addEventListener("DOMContentLoaded", () => {
+  initializeLanguage();
+  document.getElementById("language").addEventListener("click", (e) => {
+    if (e.target.tagName === "BUTTON") {
+      setLanguage(e.target.dataset.language);
+      document
+        .querySelectorAll("#language button")
+        .forEach((btn) => btn.classList.remove("active"));
+      e.target.classList.add("active");
+    }
   });
 });
 
-/**
- * The above JavaScript functions initialize and toggle a dark theme for a webpage based on user
- * preference and store the theme choice in local storage.
- */
-function initializeTheme() {
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "dark") {
-    document.body.classList.add("dark");
-    document.getElementById("theme-switcher").checked = true; // Set checkbox to reflect the theme
-  } else {
-    document.body.classList.remove("dark");
-    document.getElementById("theme-switcher").checked = false; // Set checkbox to reflect the theme
+
+document.addEventListener("DOMContentLoaded", () => {
+  const themeSwitcher = document.getElementById("theme-switcher");
+
+  // Função para inicializar o tema com base na preferência do usuário ou do sistema
+  function initializeTheme() {
+    const savedTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    setTheme(savedTheme);
   }
-}
 
-/**
- * The function `toggleTheme` toggles between dark and light themes on a webpage based on the user's
- * preference stored in local storage.
- */
-function toggleTheme() {
-  const isDarkMode = localStorage.getItem("theme") === "dark";
-  document.body.classList.toggle("dark", !isDarkMode);
-  localStorage.setItem("theme", isDarkMode ? "light" : "dark");
-}
-document
-  .getElementById("theme-switcher")
-  .addEventListener("change", toggleTheme);
+  // Função para definir o tema e atualizar o ícone do botão
+  function setTheme(theme) {
+    if (theme === "dark") {
+      document.body.classList.add("dark");
+      updateThemeButtonIcon(true);
+    } else {
+      document.body.classList.remove("dark");
+      updateThemeButtonIcon(false);
+    }
+    localStorage.setItem("theme", theme);
+  }
 
-/**
- * The function `loadVideos` loads a list of videos onto a webpage, creating iframes for each video and
- * providing links to watch them.
- * @returns The `loadVideos` function loads a list of videos onto the webpage by creating iframe
- * elements for each video and appending them to the `videoContainer` element. The videos are sourced
- * from an array of video objects containing titles, video IDs, and URLs. The function also checks for
- * the existence of the `videoContainer` element and logs a warning if it is not found.
- */
-function loadVideos() {
-  const videos = [
+  // Função para atualizar o ícone do botão do tema
+  function updateThemeButtonIcon(isDark) {
+    const icon = themeSwitcher.querySelector('i');
+    if (isDark) {
+      icon.classList.remove('fa-moon');
+      icon.classList.add('fa-sun');
+    } else {
+      icon.classList.remove('fa-sun');
+      icon.classList.add('fa-moon');
+    }
+  }
+
+  // Event listener para o botão de alternar tema
+  themeSwitcher.addEventListener("click", () => {
+    const isDarkMode = document.body.classList.contains("dark");
+    setTheme(isDarkMode ? "light" : "dark");
+  });
+
+  // Inicializa o tema ao carregar a página
+  initializeTheme();
+});
+
+function loadPlaylists() {
+  const playlists = [
     {
-      title: "OVER-THINKING",
-      videoId: "Ct5kE8KGnQM",
-      url: "https://www.youtube.com/watch?v=Ct5kE8KGnQM",
+      title: "Singles (2024)",
+      playlistId: "PLxUVZPvKMNEcKd2omhOo6aH6egvDd5_nB",
+      url: "https://www.youtube.com/playlist?list=PLxUVZPvKMNEcKd2omhOo6aH6egvDd5_nB",
     },
     {
-      title: "Childhood Nostalgia",
-      videoId: "2jfeauEQx7w",
-      url: "https://www.youtube.com/watch?v=2jfeauEQx7w",
+      title: "Singles (2023)",
+      playlistId: "PLxUVZPvKMNEc923Z8otdwQQ8TXSN3VdZK",
+      url: "https://www.youtube.com/playlist?list=PLxUVZPvKMNEc923Z8otdwQQ8TXSN3VdZK",
     },
     {
-      title: "This Perfect World",
-      videoId: "kFSdn2X1Ttw",
-      url: "https://www.youtube.com/watch?v=kFSdn2X1Ttw",
+      title: "Remixes",
+      playlistId: "PLxUVZPvKMNEeppHxrsS-7yeMGzY6fvRqK",
+      url: "https://www.youtube.com/playlist?list=PLxUVZPvKMNEeppHxrsS-7yeMGzY6fvRqK",
     },
     {
-      title: "Tragic Ending",
-      videoId: "uf6PZ9WisZQ",
-      url: "https://www.youtube.com/watch?v=uf6PZ9WisZQ",
+      title: "Piano Tutorial",
+      playlistId: "PLxUVZPvKMNEfSLaVSQH4EP6isdzPdyFIG",
+      url: "https://www.youtube.com/playlist?list=PLxUVZPvKMNEfSLaVSQH4EP6isdzPdyFIG",
+    },
+    {
+      title: "Unreleased Songs",
+      playlistId: "PLxUVZPvKMNEdrWnFay_1VSI184mL94Jsx",
+      url: "https://www.youtube.com/playlist?list=PLxUVZPvKMNEdrWnFay_1VSI184mL94Jsx",
+    },
+    {
+      title: "Volumes",
+      playlistId: "PLxUVZPvKMNEetfIuzffSPH3FYIDwVUWUt",
+      url: "https://www.youtube.com/playlist?list=PLxUVZPvKMNEetfIuzffSPH3FYIDwVUWUt",
     },
   ];
 
-  const videoContainer = document.getElementById("videoContainer");
+  const playlistContainer = document.getElementById("playlistContainer");
 
-  if (!videoContainer) {
-    console.warn("videoContainer não encontrado.");
+  if (!playlistContainer) {
+    console.warn("playlistContainer não encontrado.");
     return;
   }
 
-  videos.forEach((video) => {
+  playlists.forEach((playlist) => {
     const colDiv = document.createElement("div");
-    colDiv.className = "col";
+    colDiv.className = "container p-3";
 
     colDiv.innerHTML = `
-            <iframe
-              src="https://www.youtube.com/embed/${video.videoId}?si=dca-S4qIp2txXlSA"
-              title="${video.title}"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-            <div class="video-links">
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.youtube.com/embed/videoseries?list=${playlist.playlistId}"
+                title="${playlist.title}"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="playlist-links">
               <a
+                type="button"
                 rel="noopener"
-                class="link"
-                href="${video.url}"
+                class="btn"
+                href="${playlist.url}"
                 target="_blank"
+                aria-label="Check out ${playlist.title} playlist on YouTube"
               >
-                <strong>${video.title}</strong>
+              <span class="lead">${playlist.title}</span>
               </a>
             </div>
           `;
 
-    videoContainer.appendChild(colDiv);
+    playlistContainer.appendChild(colDiv);
   });
 }
+loadPlaylists();
 
-/**
- * The function `showMenu` toggles the responsive class on an element with the id "myTopnav" to show or
- * hide a menu.
- */
-function showMenu() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
+
+/* This JavaScript code snippet is used to add an "active" class to the navigation link that
+corresponds to the current page. Here's a breakdown of what it does: */
+const currentPage = window.location.pathname;
+document.querySelectorAll(".nav-link").forEach((link) => {
+  if (link.getAttribute("href") === currentPage) {
+    link.classList.add("active");
   } else {
-    x.className = "topnav";
+    link.classList.remove("active");
   }
-}
-
-// Call loadVideos after the page is fully rendered
-window.onload = function () {
-  initializeLanguage();
-  initializeTheme();
-  loadVideos();
-};
-
-/* This code defines a JavaScript object named `translations` that contains translations for
-different languages (English, Portuguese, Japanese). Each language has key-value pairs for various
-phrases and messages commonly found on a website such as greetings, main messages, section titles,
-descriptions, and more. These translations can be used to display content in different languages on
-a website based on the user's language preference. */
-const translations = {
-  en: {
-    videos: "Videos",
-    about: "About",
-    greeting: "Hello, world!",
-    mainMessage:
-      "This is my first website built from scratch. I started coding in August 2024 and finished it in October 2024.<br>For now, there are only a few things to check out: some videos, an about page, a news page, and you can visit my social networks in the website's footer.",
-    highlight: "Highlights",
-    hDescription:
-      "A list of YouTube videos to watch here or on my Official Artist Channel.",
-    footer: "All rights reserved.",
-    videosTitle: "Videos",
-    videosDescription:
-      "This is the video section; here are some videos to watch:",
-    aboutTitle: "About",
-    aboutMessage:
-      "I made this website for fun. I was taking a programming course and learning how to build a simple yet cool website.<br>Then, after a few weeks, I started my own web project. To be honest, I used AI for some parts since I'm still new to programming.<br>I used it for the JavaScript part and to improve some of my HTML/CSS code, but of course, I didn't make it 100% using AI.<br>Thank you for visiting my website!",
-    Homepage: "Homepage",
-    Videos: "Videos",
-    About: "About",
-    News: "News",
-    newsTitle: "News",
-  },
-  br: {
-    videos: "Vídeos",
-    about: "Sobre",
-    greeting: "Olá, mundo!",
-    mainMessage:
-      "Este é meu primeiro site construído do zero. Comecei a programá-lo em agosto de 2024 e terminei em outubro de 2024.<br>Por enquanto, há apenas algumas coisas para conferir: alguns vídeos, uma página sobre, uma página de notícias, e você pode visitar minhas redes sociais no rodapé do site.",
-    highlight: "Destaques",
-    hDescription:
-      "Uma lista de vídeos do YouTube para assistir aqui ou no meu canal oficial de artista.",
-    footer: "Todos os direitos reservados.",
-    videosTitle: "Vídeos",
-    videosDescription:
-      "Esta é a seção de vídeos; aqui estão alguns vídeos para assistir:",
-    aboutTitle: "Sobre",
-    aboutMessage:
-      "Fiz este site por diversão. Estava fazendo um curso de programação e aprendendo a criar um site simples, mas legal.<br>Depois de algumas semanas, comecei meu próprio projeto web. Para ser sincero, usei IA em algumas partes, pois ainda sou iniciante em programação.<br>Usei-a para a parte de JavaScript e para melhorar meu código HTML/CSS, mas, claro, não o fiz 100% com IA.<br>Obrigado pela visita ao meu site!",
-    Homepage: "Página Inicial",
-    Videos: "Vídeos",
-    About: "Sobre",
-    News: "Notícias",
-    newsTitle: "Notícias",
-  },
-  jp: {
-    videos: "ビデオ",
-    about: "概要",
-    greeting: "こんにちは、世界！",
-    mainMessage:
-      "これは私がゼロから作った最初のウェブサイトです。2024年8月にコーディングを始め、2024年10月に完成させました。<br>現時点では、いくつかのビデオ、概要ページ、ニュースページをご覧いただけます。また、ウェブサイトのフッターにある私のSNSもご覧ください。",
-    highlight: "ハイライト",
-    hDescription:
-      "ここで、または私の公式アーティストチャンネルで視聴できるYouTubeビデオのリストです。",
-    footer: "全著作権所有。",
-    videosTitle: "ビデオ",
-    videosDescription:
-      "こちらがビデオセクションです。いくつか視聴できるビデオがあります:",
-    aboutTitle: "概要",
-    aboutMessage:
-      "このウェブサイトは趣味で作りました。プログラミングコースを受講中で、シンプルながらもクールなウェブサイトの作り方を学んでいました。<br>数週間後、自分のウェブプロジェクトを始めました。正直に言うと、プログラミングはまだ初心者なので、AIをいくつかの部分で使用しました。<br>JavaScriptの部分と、HTML/CSSコードの改善に使用しましたが、もちろん100％AIで作ったわけではありません。<br>ウェブサイトへのご訪問、ありがとうございます！",
-    Homepage: "ホームページ",
-    Videos: "ビデオ",
-    About: "概要",
-    News: "ニュース",
-    newsTitle: "最新ニュース",
-  },
-};
+});

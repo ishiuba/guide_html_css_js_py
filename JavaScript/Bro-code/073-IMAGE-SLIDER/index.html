@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAGE SLIDERRRR BRRRRR</title>
+    <style>
+        .slider {
+            position:relative;
+            width:100%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slider img {
+            width: 100%;
+            display: none;
+        }
+
+        img.displaySlide {
+            display: block;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        .slider button {
+            position: absolute;
+            top:50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            background-color: hsla(0, 0%, 0%, 0.5);
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .previous{
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        @keyframes fade {
+            from {opacity: .5;}
+            to {opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slides">
+            <img class="slide" src="https://live.dealer-asset.co/br1001/siteassets/ford-brasil-mustang-gt-performance-vermelho-140624.png" alt="FORD MUSTANG GT">
+            <img class="slide" src="https://vehicle-images.dealerinspire.com/stock-images/chrome/abc9a4f08fe4d8707101300a407a6efd.png" alt="FORD MUSTANG ECOBOOST">
+            <img class="slide" src="https://www.fordmustang.com.br/wp-content/uploads/2024/08/fordmustang-01.webp" alt="FORD MUSTANG MACH">
+        </div>
+        <button class="previous" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
