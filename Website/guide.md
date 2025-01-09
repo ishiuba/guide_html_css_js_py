@@ -15,7 +15,7 @@ Dentro do index, use o atalho para montar a estrutura do html5 "!" e aperte ente
 ## Criando seu website
 
 **Antes de mais nada, já adiante a importação dos seus arquivos estáticos, style.css e index.js. Use o site exemplo para saber como fazê-lo 
-(_abra o [index.html](https://iamshiuba.github.io/guide_html_css_js_py/Website/index.html) para entender_)!**
+(_abra o [index.html](https://github.com/iamshiuba/guide_html_css_js_py/blob/main/Website/index.html) para entender_)!**
 
 Agora que já fez isso, se não tiver já algo em mente, comece criando um título usando a tag `h1`. Depois adicione um parágrafo utilizando a tag `p` logo 
 abaixo do seu título. Títulos e parágrafos são bem comuns em um website, então aprender a utilizá-los é uma boa prática. Exemplo:
