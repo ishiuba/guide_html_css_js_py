@@ -2,3 +2,8 @@
 *.pyc
 /.idea
 /.vscode
+<<<<<<< Updated upstream
+/Python/.idea
+=======
+/Python/.idea
+>>>>>>> Stashed changes
