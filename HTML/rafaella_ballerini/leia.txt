@@ -1,0 +1,8 @@
+Esse passo a passo é ensinado pela Rafaella Ballerini, nele você aprende um pouco como 
+funciona o HTML de forma prática com uma página "index" e um "sobremim" onde fica a seu
+critério colocar ou não informações sobre você. Assista o video dela acessando o link a
+seguir:
+https://youtu.be/Fhy-5CtVkiM?list=TLPQMTUwOTIwMjRAyBvbhjKdLg
+
+Aqui ela explica como estilizar seu site, assista até o final:
+https://youtu.be/AB35iSr1YyA
