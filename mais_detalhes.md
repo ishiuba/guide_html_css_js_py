@@ -33,5 +33,7 @@
 > https://www.youtube.com/playlist?list=PLdPPE0hUkt0q_XT8zDe313e27wFQ-k9fe (Curso intensivo de React do canal Cod3r Cursos)
 > 
 > https://www.alura.com.br/artigos/javascript
+>
+> https://github.com/braziljs/eloquente-javascript (Eloquent Javascript Book em Português)
 
 ## OBS: alguns dos links foram disponibilizados pelos professores, seja grato a eles! (profs Caio e Luis R.)
