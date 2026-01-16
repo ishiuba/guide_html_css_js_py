@@ -1,0 +1,10 @@
+/* vamos dizer que vocẽ tenha um h1 */
+h1 {
+  color: red;
+  font-size: 3rem;
+}
+
+/* vamos dizer que tu fez um h1 avulso, quer que ele tenha outra cor? adicione um id(#id) ou classe(.classe) */
+h1.titulo_avulso {
+  color: pink;
+}
